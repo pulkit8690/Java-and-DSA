@@ -7,3 +7,7 @@ public class four_sum {
         System.out.print(sum);
     }
 }
+/*Comments in JAva
+    1. Single Line Comments--->//
+    2. Multiline Comments--->/* */
+

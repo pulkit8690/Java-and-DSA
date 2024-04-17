@@ -1,3 +1,7 @@
+
+// print---> Print in same line
+// println---> Print in next line
+// \n---> Print in next line
 class first
 {
     public static void main(String[] args) {
@@ -10,6 +14,3 @@ class first
     }
 }
 
-// print---> Print in same line
-// println---> Print in next line
-// \n---> Print in next line
