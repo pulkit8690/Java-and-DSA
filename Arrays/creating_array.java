@@ -1,9 +1,11 @@
 package Arrays;
 
 
-  /*
+  /* ****** Creating an Array ********
        1. datatype arrayName[]=new datatype[size];
        2. length of array=arr.length()
+    
+    
          */
 
 public class creating_array {
