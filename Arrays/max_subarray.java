@@ -9,6 +9,26 @@ public class max_subarray {
             System.out.print(arr[i]+" ");
         }
     }
+    public static void Maxsubarray(int arr[])
+    {
+        int max_sum=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i;j<=arr.length;j++)
+            {
+                int sum=0;
+                for(int k=i;k<j;k++)
+                {
+                    sum=sum+arr[k];
+                    if(sum>max_sum)
+                    {
+                        max_sum=sum;
+                    }
+                }
+            }
+        }
+        System.out.println(max_sum);
+    }
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.print("Enter Size of array: ");
@@ -21,5 +41,7 @@ public class max_subarray {
         }
         print(arr);
         System.out.println();  
+        System.out.print("Max Sub Array Sum is: ");
+        Maxsubarray(arr);
     }
 }
