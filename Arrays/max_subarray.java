@@ -148,8 +148,8 @@ public class max_subarray {
         print(arr);
         System.out.println();  
         System.out.print("Max Sub Array Sum is: ");
-        Maxsubarray(arr);
-        PrefixSum(arr);
-        kadane(arr);
+        Maxsubarray(arr); //(O(n^3))
+        PrefixSum(arr); //(O(n^2))
+        kadane(arr); //(O(n))
     }
 }
