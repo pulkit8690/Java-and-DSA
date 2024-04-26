@@ -1,9 +1,13 @@
 /*
  Trappinng Rainwater
+ 1. minimum bar needed for trapping rainwater should be greator than 2
+ 2. Bar height should not be in increasing or decreasing order to trap rain water
+ 3. water_trapped= water_level - height[bar]
+ 4. water_level=min(left_max_height_bar,    right_max_height_bar)
+ 5. Time Complexity of code--> O(n)
  */
 package Arrays;
 import java.util.*;
-import java.math.*;
 public class trapping_rainwater {
     public static void print(int arr[])
     {
@@ -11,7 +15,7 @@ public class trapping_rainwater {
         for(int i=0;i<arr.length;i++)
         {
             System.out.print(arr[i]+" ");
-        }
+        } 
     }
 
     public static int trapped_water(int arr[],int width)
@@ -55,7 +59,7 @@ public class trapping_rainwater {
         System.out.println(); 
         System.out.print("Total Rain Water Trapped: ");
         int t_w=trapped_water(arr, width);
-        System.out.print(t_w);
+        System.out.print(t_w+ " units");
     }
      
 }
