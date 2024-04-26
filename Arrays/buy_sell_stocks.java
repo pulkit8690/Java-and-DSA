@@ -1,3 +1,8 @@
+/*
+ 1. Profit=Selling Price - Buy Price
+ 2. Time Complexity = O(n)
+ */
+
 package Arrays;
 
 import java.util.Scanner;
