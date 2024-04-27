@@ -15,6 +15,37 @@ public class max_min {
             System.out.println();
         }
     }
+    public static void MaxMat(int mat[][])
+    {
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<mat.length;i++)
+        {
+            for(int j=0;j<mat[0].length;j++)
+            {
+                if(mat[i][j]>max)
+                {
+                    max=mat[i][j];
+                }
+            }
+        }
+        System.out.println(max);
+    }
+    public static void MinMat(int mat[][])
+    {
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<mat.length;i++)
+        {
+            for(int j=0;j<mat[0].length;j++)
+            {
+                if(mat[i][j]<min)
+                {
+                    min=mat[i][j];
+                }
+            }
+        }
+        System.out.println(min);
+    }
+
     public static void main(String[] args) 
     {
         Scanner sc= new Scanner(System.in);
@@ -34,6 +65,10 @@ public class max_min {
             }
         }
         print(matrix);
+        System.out.print("Maximum value is: ");
+        MaxMat(matrix);
+        System.out.print("Minimum value is: ");
+        MinMat(matrix);
     }
 }
 
