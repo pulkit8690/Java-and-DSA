@@ -6,7 +6,7 @@
         it has time complexity-->O(n)
         it has Space Complexity-->O(1)
  */
-package Arrays;
+//package Arrays;
 import java.util.Scanner;
 
 public class reverse_array {

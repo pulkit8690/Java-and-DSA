@@ -27,7 +27,7 @@
  */
 
 
-package Arrays;
+//package Arrays;
 import java.util.*;
 public class max_subarray {
     public static void print(int arr[])

@@ -4,7 +4,7 @@
 
 
 
-package Arrays;
+//package Arrays;
 
 import java.util.Scanner;
 

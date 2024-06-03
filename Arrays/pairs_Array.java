@@ -6,7 +6,7 @@
  */
 
 
-package Arrays;
+//package Arrays;
 import java.util.*;
 public class pairs_Array {
     

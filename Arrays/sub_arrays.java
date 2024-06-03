@@ -1,5 +1,5 @@
 
-package Arrays;
+//package Arrays;
 import java.util.*;
 public class sub_arrays {
     public static void print(int arr[])
@@ -17,8 +17,8 @@ public class sub_arrays {
         System.out.println("Total Subarray are: "+ total_subarray);
         //int arr_sum=new int[n];
         int sum=0;
-        int sum_min=Integer.MIN_VALUE;
-        int sum_max=Integer.MAX_VALUE;
+        int sum_min=Integer.MAX_VALUE;
+        int sum_max=Integer.MIN_VALUE;
         System.out.println("Subarray    ||    Sum");
         for(int i=0;i<arr.length;i++)
         {
@@ -30,13 +30,13 @@ public class sub_arrays {
                     sum=sum+arr[k];
                 }
                 System.out.println("||  "+sum);
-                if(sum>sum_min)
-                {
-                    sum_min=sum;
-                }
-                if(sum<sum_max)
+                if(sum>sum_max)
                 {
                     sum_max=sum;
+                }
+                if(sum<sum_min)
+                {
+                    sum_min=sum;
                 }
                 sum=0;
                 System.out.println();

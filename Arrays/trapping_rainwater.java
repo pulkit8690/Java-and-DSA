@@ -6,7 +6,7 @@
  4. water_level=min(left_max_height_bar,    right_max_height_bar)
  5. Time Complexity of code--> O(n)
  */
-package Arrays;
+//package Arrays;
 import java.util.*;
 public class trapping_rainwater {
     public static void print(int arr[])

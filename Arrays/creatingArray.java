@@ -1,4 +1,4 @@
-package Arrays;
+//package Arrays;
 
 
   /* ****** Creating an Array ********
@@ -8,7 +8,7 @@ package Arrays;
     
          */
 
-public class creating_array {
+public class creatingArray {
     public static void main(String[] args) {
         int marks[]=new int[50];
         int num[]={1,2,3};

@@ -3,7 +3,7 @@
  2. Time Complexity = O(n)
  */
 
-package Arrays;
+//package Arrays;
 
 import java.util.Scanner;
 
