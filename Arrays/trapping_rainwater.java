@@ -60,6 +60,7 @@ public class trapping_rainwater {
         System.out.print("Total Rain Water Trapped: ");
         int t_w=trapped_water(arr, width);
         System.out.print(t_w+ " units");
+        sc.close();
     }
      
 }

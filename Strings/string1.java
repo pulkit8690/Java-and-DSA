@@ -12,11 +12,11 @@ public class string1
 {
     public static void main(String args[])
     {
-        char arr[] ={'a','b','d','e'};   // char array
+        //char arr[] ={'a','b','d','e'};   // char array
         
         // String
-        String str1 ="abcde@12383-";
-        String str2= new String("xyz123");
+       // String str1 ="abcde@12383-";
+       // String str2= new String("xyz123");
 
         // Input
         Scanner sc = new Scanner(System.in);
@@ -36,5 +36,6 @@ public class string1
         System.out.println("After Concatenation: ");
         String str6= str4+" "+str5;
         System.out.println(str6);
+        sc.close();
     }
 }

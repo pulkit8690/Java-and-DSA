@@ -53,5 +53,6 @@ public class linear_search {
         {
         System.out.println(key+" is found  at Index: "+ans);
         }
+        sc.close();
     }
 }

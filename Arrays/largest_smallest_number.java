@@ -58,6 +58,6 @@ public class largest_smallest_number{
         System.out.println("Largest Element in the Array is "+large);
         int small=smallest(arr);
         System.out.println("Smallest Element in the Array is "+small);
-
+        sc.close();
     }
 }

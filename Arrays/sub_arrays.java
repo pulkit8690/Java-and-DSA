@@ -60,5 +60,6 @@ public class sub_arrays {
         System.out.println();
         System.out.println("Subbrays are: ");
         subarray(arr);
+        sc.close();
     }
 }

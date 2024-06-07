@@ -58,5 +58,6 @@ public class reverse_array {
         //reverse(arr);
         reverse_swap(arr);
         print(arr);
+        sc.close();
     }
 }

@@ -151,5 +151,6 @@ public class max_subarray {
         Maxsubarray(arr); //(O(n^3))
         PrefixSum(arr); //(O(n^2))
         kadane(arr); //(O(n))
+        sc.close();
     }
 }

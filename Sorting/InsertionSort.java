@@ -39,5 +39,6 @@ public class InsertionSort
         System.out.println("Insertion Sort");
         Insertion(arr);
         print(arr);
+        sc.close();
     }
 }

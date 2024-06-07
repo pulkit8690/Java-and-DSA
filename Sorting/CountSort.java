@@ -58,5 +58,6 @@ public class CountSort
         System.out.println("Count Sort");
         Count(arr);
         print(arr);
+        sc.close();
     }
 }

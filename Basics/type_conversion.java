@@ -59,6 +59,7 @@ public class type_conversion {
         //char f= a+d+e;// error
         int f= a+d+e;
         System.out.println(f);
+        sc.close();
 
     }
 }

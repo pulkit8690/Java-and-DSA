@@ -37,5 +37,6 @@ public class SortFunction_desending
         Arrays.sort(arr,0,3,Collections.reverseOrder()); // (array,startIndex,endIndex) endindex is non inclusive ie if u want to sort upto 2nd index then write 3
 
         print(arr);
+        sc.close();
     }
 }

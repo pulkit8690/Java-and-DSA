@@ -55,5 +55,6 @@ public  class BubbleSort_Optimized
         System.out.println("After Bubble Sort");
         bubble(arr);
         print(arr);
+        sc.close();
     }
 }

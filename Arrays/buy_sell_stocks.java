@@ -49,5 +49,6 @@ public class buy_sell_stocks {
         System.out.print("Maximum Profit: ");
         int b_s=buy_sell(arr);
         System.out.print(b_s);
+        sc.close();
     }
 }

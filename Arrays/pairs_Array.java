@@ -49,5 +49,6 @@ public class pairs_Array {
         System.out.println();
         System.out.println("Pairs is Array are: ");
         pair(arr);
+        sc.close();
     }
 }

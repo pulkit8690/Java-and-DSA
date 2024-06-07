@@ -1,3 +1,5 @@
+package Array2D;
+
 import java.util.Scanner;
 
 public class spiral_matrix {
@@ -77,6 +79,7 @@ public class spiral_matrix {
         print(matrix);
         System.out.print("Spiral Matrix is :");
         spiral(matrix);
+        sc.close();
     }
     
 }

@@ -30,6 +30,7 @@ public class StringPalindrome
         {
             System.out.println(str1+" is a not a Palindrome.");
         }
+        sc.close();
 
     }
 }

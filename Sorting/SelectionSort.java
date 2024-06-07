@@ -52,5 +52,6 @@ public class SelectionSort
         System.out.println("Selection Sort");
         Selection(arr);
         print(arr);
+        sc.close();
     }
 }

@@ -71,6 +71,6 @@ public class creation {
             }
             System.out.println();
         }
-        
+        sc.close();
     }
 }

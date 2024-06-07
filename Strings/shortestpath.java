@@ -50,5 +50,6 @@ public class shortestpath {
         System.out.print("Enter Y: ");
         y = sc.nextFloat();
         shortestPath(str1, x, y);
+        sc.close();
     }
 }

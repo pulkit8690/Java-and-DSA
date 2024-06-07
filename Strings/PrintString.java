@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 public class PrintString
 {
     public static void print(String str)

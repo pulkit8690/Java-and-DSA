@@ -52,7 +52,7 @@ public class search {
         System.out.print("Enter Number you want to Search in Array: ");
         int key=sc.nextInt();
         search_key(matrix, key);
-        
+        sc.close();
         
     }
 }

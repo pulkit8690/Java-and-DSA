@@ -69,6 +69,7 @@ public class max_min {
         MaxMat(matrix);
         System.out.print("Minimum value is: ");
         MinMat(matrix);
+        sc.close();
     }
 }
 
