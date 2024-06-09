@@ -58,7 +58,7 @@ public class sub_arrays {
         }
         print(arr);
         System.out.println();
-        System.out.println("Subbrays are: ");
+        System.out.println("Sub Arrays are: ");
         subarray(arr);
         sc.close();
     }
