@@ -2,7 +2,7 @@
  1.Array Should be Sorted for Binary Search
  2. Time Complexity---> O(log2(n))
  */
-
+// Also Called Modified Binary Search
 
 //package Arrays;
 
