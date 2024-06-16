@@ -15,7 +15,7 @@
     - Contains Element O(n)
  */
 
-package ArrayList;
+//package ArrayList;
 import java.util.*;
 public class Creation {
     public static void main(String[] args) {

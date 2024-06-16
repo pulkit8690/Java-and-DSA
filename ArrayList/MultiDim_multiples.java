@@ -1,4 +1,4 @@
-package ArrayList;
+//package ArrayList;
 /*
  print folowing in multi dim array list
  list1: 1 2 3 4 5
