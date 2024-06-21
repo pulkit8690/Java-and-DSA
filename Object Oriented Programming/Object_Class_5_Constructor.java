@@ -52,3 +52,6 @@ class Student
         this.marks=other.marks;
     }
 }
+
+
+// this keyword basically tells to which object we are refering
