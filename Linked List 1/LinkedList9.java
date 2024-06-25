@@ -1,5 +1,6 @@
 // Search element in linked list iterative way or linear search
 /*
+
  public int search(int key)
     {
         int i=0;
