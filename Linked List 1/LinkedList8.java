@@ -1,5 +1,6 @@
 // Remove Tail
 /*
+
  public int removeLast()
     {
         if(size==0)
