@@ -1,5 +1,6 @@
 // Remove Head
 /*
+
  public int removeFirst()
     {
         if(size==0)
