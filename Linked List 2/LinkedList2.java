@@ -1,6 +1,7 @@
 // Removing a Cycle in LL
 
-public class LinkedList2 {
+public class LinkedList2 
+{
     public static class Node{
         int data;
         Node next;
