@@ -1,6 +1,7 @@
 import java.util.*;
 
-public class LinkedList3 {
+public class LinkedList3 
+{
     public static void main(String[] args) {
         //Creation
         LinkedList<Integer> ll=new LinkedList<>();
