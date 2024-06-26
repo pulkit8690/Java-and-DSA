@@ -1,5 +1,6 @@
 // Detecting Cycle in LL
 // Floyds Cycle Finding Algorithm
+
 public class Linkedlist1 {
     public static class Node{
         int data;
