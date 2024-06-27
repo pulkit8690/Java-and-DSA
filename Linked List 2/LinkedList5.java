@@ -41,7 +41,8 @@
 
     }
  */
-public class LinkedList5 {
+public class LinkedList5 
+{
     public static class Node{
         int data;
         Node next;
