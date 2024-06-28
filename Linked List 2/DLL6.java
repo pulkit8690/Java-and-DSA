@@ -1,4 +1,4 @@
-public class DLL4 {
+public class DLL6 {
     public static class Node {
         int data;
         Node next;
@@ -40,33 +40,6 @@ public class DLL4 {
         newNode.prev=tail;
         tail=newNode;
     }
-    public int removeLast()
-    {
-        if(size==0)
-        {
-            System.out.println("Linked List is empty");
-            return Integer.MAX_VALUE;
-        }
-        if(size==1)
-        {
-            int val=tail.data;
-            head=tail=null;
-            size=0;
-            return val;
-        }
-        Node temp=head;
-        int i=0;
-        while(i<(size-2))
-        {
-            temp=temp.next;
-            i++;
-        }
-        int val= temp.next.data;
-        temp.next.prev=null;
-        temp.next=null;
-        tail=temp;
-        return val;
-    }
     public void print() {
         Node temp = head;
         while(temp!=null)
@@ -76,8 +49,48 @@ public class DLL4 {
         }
         System.out.println("null");
     }
+    public int removeFirst()
+    {
+        if(size==0)
+        {
+            System.out.println("Doubly Linked is Empty");
+            return Integer.MIN_VALUE;
+        }
+        if(size==1)
+        {
+            int val=head.data;
+            head=tail=null;
+            size=0;
+            return val;
+        }
+        int val= head.data;
+        head=head.next;
+        head.prev=null;
+        size--;
+        return val;
+
+    }
+    public void remove_ati(int index)
+    {
+        if (index==0) {
+            removeFirst();
+            return;
+        }
+        Node temp=head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+
+        temp.prev.next = temp.next;
+        if (temp.next != null) {
+            temp.next.prev = temp.prev;
+        } else {
+            tail = temp.prev;
+        }
+        size--;
+    }
     public static void main(String[] args) {
-        DLL4 ll =new DLL4();
+        DLL6 ll =new DLL6();
         ll.addLast(2);
         ll.addLast(1);
         ll.addFirst(4);
@@ -85,9 +98,9 @@ public class DLL4 {
         System.out.print("Linked List: ");
         ll.print();
         System.out.println("Size of Linked List: "+size);
-        System.out.println("Deleting Tail of Linked List");
-        System.out.println("Value Deleted: "+ll.removeLast());
-        System.out.print("After removing Tail: ");
+        System.out.println("Deleting element of Linked List");
+        ll.remove_ati(2);
+        System.out.print("After removing : ");
         ll.print();
         System.out.println("Size of Linked List: "+size);
     }
