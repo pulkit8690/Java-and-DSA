@@ -1,5 +1,5 @@
 import java.util.*;
-
+//O(n)
 public class ValidParenthesis {
     public static boolean isValidParenthesis(String s)
     {
