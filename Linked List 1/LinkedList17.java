@@ -70,7 +70,7 @@ public class LinkedList17 {
             {
                 curr=curr.next;
             }
-            prev.next = curr.next;
+            prev.next = curr;
             prev = prev.next;
             curr = curr.next;
         }
