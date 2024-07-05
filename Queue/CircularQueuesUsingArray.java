@@ -19,7 +19,7 @@ public class CircularQueuesUsingArray {
         {
             return (rear+1)%size==front;
         }
-        public void add(int data)
+        public void add(int data) //O(1)
         {
             if(isFull())
             {
@@ -33,7 +33,7 @@ public class CircularQueuesUsingArray {
             rear=(rear+1)%size;
             arr[rear]=data;
         }
-        public int remove()
+        public int remove() //O(1)
         {
             if(isEmpty())
             {
