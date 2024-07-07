@@ -27,3 +27,4 @@ public class PassThePillow {
         System.out.println("Example 2 Output: " + findHolder(n2, time2));  // Output: 3
     }
 }
+
