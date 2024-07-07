@@ -13,6 +13,6 @@ public class implementationUsingJCF {
         
     }
 }
-
-// Queue is a interface so we can't create its object due to to which we implement queue using LinkedList or ArrayDeque;
+//NOTE
+// Queue is a interface so we can't create its object due to to which we implement queue using LinkedList or ArrayDeque ;
 
