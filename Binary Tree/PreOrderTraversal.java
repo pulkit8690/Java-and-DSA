@@ -1,4 +1,4 @@
-
+// O(N)
 public class PreOrderTraversal {
     public static class Node{
         int data;
