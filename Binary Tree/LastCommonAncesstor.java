@@ -36,8 +36,12 @@ public class LastCommonAncesstor {
     {
         ArrayList<Node> path1= new ArrayList<>();
         ArrayList<Node> path2= new ArrayList<>();
-        getPath(root,n1,path1);
-        getPath(root,n2,path2);
+        boolean findn1= getPath(root,n1,path1);
+        boolean findn2= getPath(root,n2,path2);
+        if(findn1==false || findn2==false)
+        {
+            return null;
+        }
         int i=0;
         for(;i<path1.size() && i<path2.size();i++)
         {
@@ -66,7 +70,7 @@ public class LastCommonAncesstor {
         root.right.right = new Node(7);
 
 
-        int n1= 4;
+        int n1= 40;
         int n2= 5;
         System.out.println(lca(root, n1, n2).data);
     }
