@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.*;
 
-public class PreOrder_IterativeUsingStack {
+public class PostOrder_IterativeUsing2Stack {
     public static class Node{
         int data;
         Node left;
@@ -27,27 +26,26 @@ public class PreOrder_IterativeUsingStack {
             newNode.right=BuildTree(nodes);
             return newNode;
         }
-        public ArrayList<Integer> PreOrder(Node root)
+        public ArrayList<Integer> Postorder(Node root)
         {
             ArrayList<Integer> ans = new ArrayList<>();
-            if(root==null)
+            if(root ==null)
             {
                 return ans;
             }
-            Stack<Node> s= new Stack<>();
-            s.push(root);
-            while(!s.isEmpty())
+            Stack<Node> s1 = new Stack<Node>();
+            Stack<Node> s2= new Stack<Node>();
+            s1.push(root);
+            while(!s1.isEmpty())
             {
-                root=s.pop();
-                ans.add(root.data);
-                if(root.right!=null)
-                {
-                    s.push(root.right);
-                }
-                if(root.left!=null)
-                {
-                    s.push(root.left);
-                }
+                root=s1.pop();
+                s2.add(root);
+                if(root.left!=null) s1.push(root.left);
+                if(root.right!=null) s1.push(root.right);
+            }
+            while(!s2.isEmpty())
+            {
+                ans.add(s2.pop().data);
             }
             return ans;
         }
@@ -56,7 +54,7 @@ public class PreOrder_IterativeUsingStack {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree= new BinaryTree();
         Node root =tree.BuildTree(nodes);
-        ArrayList<Integer> ans = tree.PreOrder(root);
+        ArrayList<Integer> ans = tree.Postorder(root);
         System.out.println(ans);
     }
 }
