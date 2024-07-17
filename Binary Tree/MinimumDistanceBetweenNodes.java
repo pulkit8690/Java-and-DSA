@@ -12,57 +12,62 @@ public class MinimumDistanceBetweenNodes {
             this.right = null;
         }
     }
-    public static boolean getPath(Node root, int n , ArrayList<Node> path)
+    public static Node lca2(Node root,int n1, int n2)
+    {
+        if(root==null || root.data==n1 || root.data==n2)
+        {
+            return root;
+        }
+        Node lcaLeft=lca2(root.left, n1, n2);
+        Node lcaRight=lca2(root.right, n1, n2);
+        if(lcaLeft==null)
+        {
+            return lcaRight;
+        }
+        if(lcaRight==null)
+        {
+            return lcaLeft;
+        }
+        return root;
+    }
+    public static int lcaDist(Node root, int n)
     {
         if(root==null)
         {
-            return false;
+            return -1;
         }
-        path.add(root);
         if(root.data==n)
         {
-            return true;
+            return 0;
         }
-        boolean foundleft=getPath(root.left, n, path);
-        boolean foundright=getPath(root.right, n, path);
-        if(foundleft||foundright)
+        int Dleft=lcaDist(root.left, n);
+        int Dright=lcaDist(root.right, n);
+        if(Dleft==-1 && Dright==-1)
         {
-            return true;
-        }
-        path.remove(path.size()-1);
-        return false;
-    }
-    public static Node lca(Node root, int n1, int n2)
-    {
-        ArrayList<Node> path1= new ArrayList<>();
-        ArrayList<Node> path2= new ArrayList<>();
-        boolean findn1= getPath(root,n1,path1);
-        boolean findn2= getPath(root,n2,path2);
-        if(findn1==false || findn2==false)
+            return -1;
+        }else if(Dleft==-1)
         {
-            return null;
+            return Dright+1;
         }
-        int i=0;
-        for(;i<path1.size() && i<path2.size();i++)
-        {
-            if(path1.get(i)!=path2.get(i))
-            {
-                break;
-            }
+        else{
+            return Dleft+1;
         }
-        Node lca=path1.get(i-1);
-        return lca;
     }
     public static int MinDistance(Node root, int n1,int n2)
     {
-        Node L = lca(root, n1, n2);
-        if(L==null)
-        {
-            return -1;
-        }
-        
+        Node Lca = lca2(root, n1, n2);
+        int dist1=lcaDist(Lca,n1);
+        int dist2=lcaDist(Lca,n2);
+        return dist1+dist2;
     }
     public static void main(String[] args) {
+        /*
+                        1
+                       / \
+                      2   3
+                     / \ / \
+                    4  5 6  7
+         */
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
@@ -70,5 +75,8 @@ public class MinimumDistanceBetweenNodes {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+        int n1=4,n2=5;
+        System.out.println(MinDistance(root, n1, n2));
     }
+    
 }
