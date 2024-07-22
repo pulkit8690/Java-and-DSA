@@ -1,3 +1,6 @@
+// Keys are Inserted Order
+// Doubly LinkedList is followed in its implementation;
+
 import java.util.*;
 public class LinkedHasMap_Operation {
     public static void main(String[] args) {
