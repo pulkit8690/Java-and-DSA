@@ -32,7 +32,7 @@ public class DiameterOfTree {
         int leftHeight=Height(root.left);
         int rightDiameter=Diameter1(root.right);
         int rightHeight=Height(root.right);
-        int selfDiameter= leftHeight+rightHeight+1;
+        int selfDiameter= leftHeight+rightHeight;
         return Math.max(selfDiameter,Math.max(rightDiameter, leftDiameter));
     }
     public static void main(String[] args) {
