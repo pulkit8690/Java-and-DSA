@@ -18,7 +18,6 @@ public class Union_Intersection {
     {
         HashSet<Integer> set = new HashSet<>();
         HashSet<Integer> ans = new HashSet<>();
-        int count=0;
         for(int i=0;i<arr1.length;i++)
         {
             set.add(arr1[i]);
