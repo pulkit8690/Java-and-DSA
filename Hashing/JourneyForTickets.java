@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class JourneyForTickets {
     public static String start(HashMap<String,String> tickets)
