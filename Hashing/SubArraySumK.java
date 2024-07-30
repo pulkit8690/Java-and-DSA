@@ -5,6 +5,7 @@ public class SubArraySumK {
         HashMap<Integer,Integer> map= new HashMap<>();
         int sum=0;
         int ans=0;
+        map.put(0,1);
         for(int j=0;j<arr.length;j++)
         {
             sum+=arr[j];
