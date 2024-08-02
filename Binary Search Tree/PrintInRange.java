@@ -25,13 +25,20 @@ public class PrintInRange {
         }
         else if(root.data<k1)
         {
-            printinRange(root.left, k1, k2);
+            printinRange(root.right, k1, k2);
         }
         else{
-            printinRange(root.right, k1, k2);
+            printinRange(root.left, k1, k2);
         }
     }
     public static void main(String[] args) {
+        /*
+                 20
+                /  \
+               10    30
+              /  \  /  \
+             5   15 25  35
+         */
         Node root = new Node(20);
         root.left = new Node(10);
         root.right = new Node(30);
