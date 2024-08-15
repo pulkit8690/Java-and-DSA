@@ -18,7 +18,7 @@ public class ImplementationofHeap {
                 par=(x-1)/2;
             }
         }
-        public int peek()
+        public int peek() //O(1)
         {
             return arr.get(0);
         }
