@@ -25,7 +25,7 @@ public class HeapSort {
     public static void heapSort(int arr[])
     {
         //Build MAX HEAP for ASCENDING ORDER
-        int n= arr.length-1;
+        int n= arr.length;
         for(int i=n/2;i>=0;i--)
         {
             heapify(arr,i,n);
