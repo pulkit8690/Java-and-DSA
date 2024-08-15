@@ -4,11 +4,11 @@ public class HeapSort_Descending {
         int left=2*i+1;
         int right=2*i+2;
         int minIdx=i;
-        if(left<size && arr[left]<arr[size])
+        if(left<size && arr[left]<arr[minIdx])
         {
             minIdx=left;
         }
-        if(right<size && arr[right]<arr[size])
+        if(right<size && arr[right]<arr[minIdx])
         {
             minIdx=right;
         }
@@ -24,7 +24,7 @@ public class HeapSort_Descending {
     public static void heapSort(int arr[])
     {
         int n=arr.length;
-        for(int i=n/2;i>=0;i++)
+        for(int i=n/2;i>=0;i--)
         {
             heapify(arr, i, n);
         }
@@ -39,7 +39,6 @@ public class HeapSort_Descending {
     }
     public static void main(String[] args) {
         int arr[]={56,1,65,3,4,90,100};
-        heapSort(arr);
         heapSort(arr);
         for(int i=0;i<arr.length;i++)
         {
