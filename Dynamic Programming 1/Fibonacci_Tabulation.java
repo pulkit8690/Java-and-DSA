@@ -1,5 +1,5 @@
 
-
+//O(n)
 public class Fibonacci_Tabulation {
     public static int fibo(int n)
     {
