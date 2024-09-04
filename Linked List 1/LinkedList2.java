@@ -15,22 +15,22 @@
  */
 
 public class LinkedList2 {
-    public static class Node {
+    public static class Node2 {
         int data;
-        Node next;
+        Node2 next;
 
-        public Node(int data) {
+        public Node2(int data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    public static Node head;
-    public static Node tail;
+    public static Node2 head;
+    public static Node2 tail;
 
     public void AddFirst(int data) {   // O(1)
         // 1. Creation of New Node
-        Node newNode = new Node(data);
+        Node2 newNode = new Node2(data);
         if (head == null) {
             head = tail = newNode;
             return;

@@ -21,22 +21,22 @@
  */
 
 public class LinkedList5 {
-    public static class Node
+    public static class Node5
     {
         int data;
-        Node next;
-        public Node(int data)
+        Node5 next;
+        public Node5 (int data)
         {
             this.data=data;
             this.next=null;
         }
     }
-    public static Node head;
-    public static Node tail;
+    public static Node5 head;
+    public static Node5 tail;
     public void AddFirst(int data)
     {
         //1. Create new Node
-        Node newNode = new Node(data);
+        Node5 newNode = new Node5 (data);
         if(head==null)
         {
             head=tail=newNode;
@@ -50,7 +50,7 @@ public class LinkedList5 {
     public void AddLast(int data)
     {
         //1. Create New Node
-        Node newNode= new Node(data);
+        Node5 newNode= new Node5 (data);
         if(head==null)
         {
             head=tail=newNode;
@@ -63,7 +63,7 @@ public class LinkedList5 {
     }
     public void print_ll()
     {
-        Node temp=head;
+        Node5 temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+"->");
@@ -78,8 +78,8 @@ public class LinkedList5 {
             AddFirst(data);
             return;
         }
-        Node newNode= new Node(data);
-        Node temp=head;
+        Node5 newNode= new Node5 (data);
+        Node5 temp=head;
         int i=0;
         while(i<index-1)
         {

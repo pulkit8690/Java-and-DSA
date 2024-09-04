@@ -4,23 +4,23 @@
  After Each New Node increase size by 1
  */
 public class LinkedList6 {
-    public static class Node
+    public static class Node6
     {
         int data;
-        Node next;
-        public Node(int data)
+        Node6 next;
+        public Node6(int data)
         {
             this.data=data;
             this.next=null;
         }
     }
-    public static Node head;
-    public static Node tail;
+    public static Node6 head;
+    public static Node6 tail;
     public static int size;
     public void AddFirst(int data)
     {
         //1. Create new Node
-        Node newNode = new Node(data);
+        Node6 newNode = new Node6 (data);
         size++;
         if(head==null)
         {
@@ -35,7 +35,7 @@ public class LinkedList6 {
     public void AddLast(int data)
     {
         //1. Create New Node
-        Node newNode= new Node(data);
+        Node6 newNode= new Node6 (data);
         size++;
         if(head==null)
         {
@@ -49,7 +49,7 @@ public class LinkedList6 {
     }
     public void print_ll()
     {
-        Node temp=head;
+        Node6 temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+"->");
@@ -64,9 +64,9 @@ public class LinkedList6 {
             AddFirst(data);
             return;
         }
-        Node newNode= new Node(data);
+        Node6 newNode= new Node6 (data);
         size++;
-        Node temp=head;
+        Node6 temp=head;
         int i=0;
         while(i<index-1)
         {

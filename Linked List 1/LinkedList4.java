@@ -17,22 +17,22 @@
     }
  */
 public class LinkedList4 {
-    public static class Node
+    public static class Node4
     {
         int data;
-        Node next;
-        public Node(int data)
+        Node4 next;
+        public Node4(int data)
         {
             this.data=data;
             this.next=null;
         }
     }
-    public static Node head;
-    public static Node tail;
+    public static Node4 head;
+    public static Node4 tail;
     public void AddLast(int data) //O(1)
     {
         //1. Create New Node
-        Node newNode= new Node(data);
+        Node4 newNode= new Node4 (data);
         if(head==null)
         {
             head=tail=newNode;
@@ -50,7 +50,7 @@ public class LinkedList4 {
             System.out.println("Linked List is empty");
             return;
         }
-        Node temp=head;
+        Node4 temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+"->");
