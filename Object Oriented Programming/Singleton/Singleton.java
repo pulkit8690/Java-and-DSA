@@ -1,4 +1,4 @@
-//package Singleton;
+package Singleton;
 
 public class Singleton {
     private Singleton()
@@ -21,6 +21,8 @@ public class Singleton {
         System.out.println(ob1);// Will Print random hashvalue
         System.out.println(ob2);// Will Print random hashvalue
         System.out.println(ob3);// Will Print random hashvalue
+
+        
         // All three objects are pointing to just one object;
     }
 }

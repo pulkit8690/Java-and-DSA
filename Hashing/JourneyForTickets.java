@@ -25,7 +25,7 @@ public class JourneyForTickets {
         map.put("Delhi", "Goa");
         String start= start(map);
         System.out.print(start);
-        for(String key : map.keySet())
+        for(@SuppressWarnings("unused") String key : map.keySet())
         {
             System.out.print("->"+map.get(start));
             start=map.get(start);
