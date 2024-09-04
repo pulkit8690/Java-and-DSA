@@ -1,28 +1,28 @@
 public class ImplementationUsingLinkedList {
-    public static class Node{
+    public static class Node1{
         int data;
-        Node next;
-        Node(int data)
+        Node1 next;
+        Node1(int data)
         {
             this.data=data;
             this.next=null;
         }
     }
     public static class Queue{
-        Node head=null;
+        Node1 head=null;
         public boolean isEmpty()
         {
             return head==null;
         }
         public void add(int data)
         {
-            Node newNode = new Node(data);
+            Node1 newNode = new Node1(data);
             if(head==null)
             {
                 head=newNode;
                 return;
             }
-            Node temp=head;
+            Node1 temp=head;
             while(temp.next!=null)
             {
                 temp=temp.next;
