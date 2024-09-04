@@ -7,7 +7,7 @@ public class Object_Class_1 {
         System.out.println(std1.marks); // 0.0
     }
 }
-class Student
+class Student1
 {
     int rno;
     String name;

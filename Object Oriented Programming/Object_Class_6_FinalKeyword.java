@@ -21,20 +21,20 @@ public class Object_Class_6_FinalKeyword {
         System.out.println(a);
 
         // For non primitive Data types
-        final Student s1= new Student("Pulkit");
+        final Student6 s1= new Student6("Pulkit");
         s1.name="ABC";// this can be change
         
         //s1=new Student("Geet"); // Error
 
     }
 }
-class Student
+class Student6
 {
     //final int a; //// Value Need to assign otherwise ERROR
 
     String name;
 
-    Student(String name)
+    Student6(String name)
     {
         this.name=name;
     }

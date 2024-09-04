@@ -2,7 +2,7 @@
 
 public class Object_Class_2 {
     public static void main(String[] args) {
-        Student std1=new Student();  //reference variable std1
+        Student2 std1=new Student2();  //reference variable std1
         std1.rno=10;
         std1.name="Pulkit";
         std1.marks=75.5f;
@@ -12,7 +12,7 @@ public class Object_Class_2 {
         System.out.println(std1.marks);
     }
 }
-class Student
+class Student2
 {
     int rno;
     String name;

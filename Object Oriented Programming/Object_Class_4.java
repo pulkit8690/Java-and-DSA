@@ -24,7 +24,7 @@ public class Object_Class_4 {
         System.out.println(std3.marks);// 75.5
     }
 }
-class Student
+class Student3
 {
     // Give Default Values 
     int rno =1000;
