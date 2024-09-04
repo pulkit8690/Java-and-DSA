@@ -1,6 +1,6 @@
 public class Object_Class_5_Constructor {
     public static void main(String[] args) {
-        Student std1 = new Student();
+        Student5 std1 = new Student5();
         std1.greeting();
         System.out.println(std1.rno); // 13
         System.out.println(std1.name); // ABC
@@ -8,17 +8,17 @@ public class Object_Class_5_Constructor {
         std1.changeName("Pulkit");
         std1.greeting();
         System.out.println();
-        Student std2 = new Student(21,"Rahul",86.7f);
+        Student5 std2 = new Student5(21,"Rahul",86.7f);
         std2.greeting();
         System.out.println(std2.rno+" "+std2.name+" "+std2.marks);
 
         System.out.println();
-        Student random=new Student(std1);
+        Student5 random=new Student5 (std1);
         System.out.println(random.rno+" "+random.name+" "+random.marks);
 
     }
 }
-class Student
+class Student5
 {
     int rno;
     String name;
@@ -32,20 +32,20 @@ class Student
         System.out.println("My Name Change to "+newName);
         name=newName;
     }
-    Student() // default Constructor
+    Student5() // default Constructor
     {
         this.rno=13;
         this.name="ABC";
         this.marks=0.0f;
     }
-    Student(int rno,String name,float marks) // Parameterized Constructor
+    Student5(int rno,String name,float marks) // Parameterized Constructor
     {
         this.rno=rno;
         this.name=name;
         this.marks=marks;
     }
 
-    Student(Student other)
+    Student5(Student5 other)
     {
         this.rno=other.rno;
         this.name=other.name;
