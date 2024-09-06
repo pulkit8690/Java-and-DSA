@@ -1,4 +1,5 @@
-
+// TC: 2^
+// SC: O((m-1)+(n-1))
 public class TotalUniquePath_Rec {
     public static int UniquePath(int m, int n)
     {
