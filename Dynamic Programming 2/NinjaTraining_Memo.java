@@ -1,5 +1,6 @@
 //TC = O(N*4)*3
 //SC= O(N) + O(N*4)
+//https://www.naukri.com/code360/problems/ninja-s-training_3621003
 import java.util.*;
 public class NinjaTraining_Memo {
     public static int NinjaTraining(int day, int last, int points[][], int dp[][])
