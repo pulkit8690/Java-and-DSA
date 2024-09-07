@@ -1,12 +1,13 @@
-// Remove Head
+package Linked_List_1;
+// Remove Tail
 /*
 
- public int removeFirst()
+ public int removeLast()
     {
         if(size==0)
         {
             System.out.println("Linked List is Empty");
-            return Integer.MAX_VALUE;
+            return Integer.MIN_VALUE;
         }
         else if(size==1)
         {
@@ -15,13 +16,22 @@
             size=0;
             return val;
         }
-        int val=head.data;
-        head=head.next;
+        int i=0;
+        Node prev=head;
+        while(i<size-2)
+        {
+            prev=prev.next;
+            i++;
+        }
+        int val= prev.next.data; // or tail.data
+        prev.next=null;
+        tail=prev;
         size--;
         return val;
+
     }
  */
-public class LinkedList7 {
+public class LinkedList8 {
     public static class Node
     {
         int data;
@@ -103,6 +113,34 @@ public class LinkedList7 {
         size--;
         return val;
     }
+    public int removeLast()
+    {
+        if(size==0)
+        {
+            System.out.println("Linked List is Empty");
+            return Integer.MIN_VALUE;
+        }
+        else if(size==1)
+        {
+            int val=head.data;
+            head=tail=null;
+            size=0;
+            return val;
+        }
+        int i=0;
+        Node prev=head;
+        while(i<size-2)
+        {
+            prev=prev.next;
+            i++;
+        }
+        int val= prev.next.data; // or tail.data
+        prev.next=null;
+        tail=prev;
+        size--;
+        return val;
+
+    }
     public void print_ll()
     {
         Node temp=head;
@@ -115,7 +153,7 @@ public class LinkedList7 {
     }
     
     public static void main(String[] args) {
-        LinkedList7 ll =new LinkedList7();
+        LinkedList8 ll =new LinkedList8();
         ll.AddLast(2);
         ll.AddLast(1);
         ll.AddFirst(4);
@@ -132,6 +170,12 @@ public class LinkedList7 {
         System.out.println("Deleting Head of Linked List");
         System.out.println("Value Deleted: "+ll.removeFirst());
         System.out.print("After removing Head: ");
+        ll.print_ll();
+        System.out.println("Size of Linked List: "+size);
+
+        System.out.println("Deleting Tail of Linked List");
+        System.out.println("Value Deleted: "+ll.removeLast());
+        System.out.print("After removing Tail: ");
         ll.print_ll();
         System.out.println("Size of Linked List: "+size);
     }

@@ -1,25 +1,6 @@
-// Search element in linked list iterative way or linear search
-/*
-
- public int search(int key)
-    {
-        int i=0;
-        Node temp=head;
-        while(temp!=null)
-        {
-            if(temp.data==key)
-            {
-                return i;
-            }
-            i++;
-            temp=temp.next;
-        }
-        return -1;
-    }
- */
-
-
-public class LinkedList9 {
+//https://www.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/
+package Linked_List_1;
+public class LinkedList14 {
     public static class Node{
         int data;
         Node next;
@@ -29,9 +10,15 @@ public class LinkedList9 {
             this.next=null;
         }
     }
-    public static Node head;
-    public static Node tail;
-    public static int size;
+    public Node head;
+    public Node tail;
+    public int size;
+    public LinkedList14() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+    /***********************Print Link List************************* */
     public void print()
     {
         Node temp=head;
@@ -88,32 +75,42 @@ public class LinkedList9 {
         newNode.next=temp.next;
         temp.next=newNode;
     }
-    /***********************Search element iteratively************************* */
-    public int search(int key)
+    public int getKthFromLast(int k)
     {
-        int i=0;
+        int n=0;
         Node temp=head;
         while(temp!=null)
         {
-            if(temp.data==key)
-            {
-                return i;
-            }
-            i++;
             temp=temp.next;
+            n++;
         }
-        return -1;
+        System.out.println(n);
+        if(k>n)
+        {
+            return -1;
+        }
+        if(k==n)
+        {
+            return head.data;
+        }
+        int i=1;
+        Node prev=head;
+        while(i<(n-k))
+        {
+            prev=prev.next;
+            i++;
+        }
+        return prev.next.data;
     }
     public static void main(String[] args) {
-        LinkedList9 ll =new LinkedList9 ();
-        ll.AddLast(2);
-        ll.AddLast(1);
-        ll.AddFirst(4);
-        ll.AddFirst(5);
-        System.out.print("Linked List: ");
+        LinkedList14 ll =new LinkedList14 ();
+        ll.AddLast(23);
+        ll.AddLast(89);
+        ll.AddLast(50);
+        ll.AddLast(30);
+        ll.AddLast(72);
+        
         ll.print();
-        int key=4;
-        System.out.println(key+" is present at index "+ll.search(key));
-        System.out.println("10 is present at index "+ll.search(10));
+        System.out.println(ll.getKthFromLast(5));
     }
 }

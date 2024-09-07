@@ -3,6 +3,7 @@
  public static int size;
  After Each New Node increase size by 1
  */
+package Linked_List_1;
 public class LinkedList6 {
     public static class Node6
     {

@@ -1,5 +1,33 @@
-//https://www.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/
-public class LinkedList14 {
+package Linked_List_1;
+// Search element Recursively 
+// TC: O(n)   SC:O(n)
+/*
+ public int helper(Node head, int key)
+    {
+        //Base Case
+        if(head==null)
+        {
+            return -1;
+        }
+        if(head.data==key)
+        {
+            return 0;
+        }
+        // kaam
+        int index=helper(head.next, key);
+        if(index==-1)
+        {
+            return -1;
+        }
+        return index+1;
+    }
+    public int rec_search(int key)
+    {
+        return helper(head,key);
+    }
+ */
+
+public class LinkedList10 {
     public static class Node{
         int data;
         Node next;
@@ -9,14 +37,9 @@ public class LinkedList14 {
             this.next=null;
         }
     }
-    public Node head;
-    public Node tail;
-    public int size;
-    public LinkedList14() {
-        this.head = null;
-        this.tail = null;
-        this.size = 0;
-    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
     /***********************Print Link List************************* */
     public void print()
     {
@@ -74,42 +97,40 @@ public class LinkedList14 {
         newNode.next=temp.next;
         temp.next=newNode;
     }
-    public int getKthFromLast(int k)
+/***********************Search element Recursively************************* */
+   
+    public int helper(Node head, int key) // TC: O(n)   SC:O(n)
     {
-        int n=0;
-        Node temp=head;
-        while(temp!=null)
-        {
-            temp=temp.next;
-            n++;
-        }
-        System.out.println(n);
-        if(k>n)
+        //Base Case
+        if(head==null)
         {
             return -1;
         }
-        if(k==n)
+        if(head.data==key)
         {
-            return head.data;
+            return 0;
         }
-        int i=1;
-        Node prev=head;
-        while(i<(n-k))
+        // kaam
+        int index=helper(head.next, key);
+        if(index==-1)
         {
-            prev=prev.next;
-            i++;
+            return -1;
         }
-        return prev.next.data;
+        return index+1;
+    }
+    public int rec_search(int key)
+    {
+        return helper(head,key);
     }
     public static void main(String[] args) {
-        LinkedList14 ll =new LinkedList14 ();
-        ll.AddLast(23);
-        ll.AddLast(89);
-        ll.AddLast(50);
-        ll.AddLast(30);
-        ll.AddLast(72);
-        
+        LinkedList10 ll =new LinkedList10 ();
+        ll.AddLast(2);
+        ll.AddLast(1);
+        ll.AddFirst(4);
+        ll.AddFirst(5);
+        System.out.print("Linked List: ");
         ll.print();
-        System.out.println(ll.getKthFromLast(5));
+        System.out.println("2 is present at index "+ll.rec_search(2));
+        System.out.println("10 is present at index "+ll.rec_search(10));
     }
 }

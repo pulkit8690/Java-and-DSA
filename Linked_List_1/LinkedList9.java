@@ -1,32 +1,26 @@
-// Search element Recursively 
-// TC: O(n)   SC:O(n)
+package Linked_List_1;
+// Search element in linked list iterative way or linear search
 /*
- public int helper(Node head, int key)
+
+ public int search(int key)
     {
-        //Base Case
-        if(head==null)
+        int i=0;
+        Node temp=head;
+        while(temp!=null)
         {
-            return -1;
+            if(temp.data==key)
+            {
+                return i;
+            }
+            i++;
+            temp=temp.next;
         }
-        if(head.data==key)
-        {
-            return 0;
-        }
-        // kaam
-        int index=helper(head.next, key);
-        if(index==-1)
-        {
-            return -1;
-        }
-        return index+1;
-    }
-    public int rec_search(int key)
-    {
-        return helper(head,key);
+        return -1;
     }
  */
 
-public class LinkedList10 {
+
+public class LinkedList9 {
     public static class Node{
         int data;
         Node next;
@@ -39,7 +33,6 @@ public class LinkedList10 {
     public static Node head;
     public static Node tail;
     public static int size;
-    /***********************Print Link List************************* */
     public void print()
     {
         Node temp=head;
@@ -96,40 +89,32 @@ public class LinkedList10 {
         newNode.next=temp.next;
         temp.next=newNode;
     }
-/***********************Search element Recursively************************* */
-   
-    public int helper(Node head, int key) // TC: O(n)   SC:O(n)
+    /***********************Search element iteratively************************* */
+    public int search(int key)
     {
-        //Base Case
-        if(head==null)
+        int i=0;
+        Node temp=head;
+        while(temp!=null)
         {
-            return -1;
+            if(temp.data==key)
+            {
+                return i;
+            }
+            i++;
+            temp=temp.next;
         }
-        if(head.data==key)
-        {
-            return 0;
-        }
-        // kaam
-        int index=helper(head.next, key);
-        if(index==-1)
-        {
-            return -1;
-        }
-        return index+1;
-    }
-    public int rec_search(int key)
-    {
-        return helper(head,key);
+        return -1;
     }
     public static void main(String[] args) {
-        LinkedList10 ll =new LinkedList10 ();
+        LinkedList9 ll =new LinkedList9 ();
         ll.AddLast(2);
         ll.AddLast(1);
         ll.AddFirst(4);
         ll.AddFirst(5);
         System.out.print("Linked List: ");
         ll.print();
-        System.out.println("2 is present at index "+ll.rec_search(2));
-        System.out.println("10 is present at index "+ll.rec_search(10));
+        int key=4;
+        System.out.println(key+" is present at index "+ll.search(key));
+        System.out.println("10 is present at index "+ll.search(10));
     }
 }
