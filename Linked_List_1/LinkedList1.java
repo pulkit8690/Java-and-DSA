@@ -1,5 +1,6 @@
 
 // Note: Head and tail of Linked List remains same until any operation happens on th Linked list
+package Linked_List_1;
 public class LinkedList1 {
     // Creation of node
     public static class Node1
