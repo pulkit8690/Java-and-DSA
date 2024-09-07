@@ -1,4 +1,4 @@
-public class ImplementationUsingLinkedList {
+public class ImplementationUsingLinkedList1 {
     public static class Node1{
         int data;
         Node1 next;
