@@ -8,7 +8,7 @@ public class ImplementationofHeap {
             arr.add(data);
             int x=arr.size()-1;
             int par=(x-1)/2;
-            while (arr.get(x)<arr.get(par)) // change sign for mAx heap
+            while (arr.get(x)<arr.get(par)) // change sign for max heap
             {
                 //Swap
                 int temp= arr.get(x);
@@ -16,7 +16,7 @@ public class ImplementationofHeap {
                 arr.set(par, temp);
                 x=par;
                 par=(x-1)/2;
-            }
+             }
         }
         public int peek() //O(1)
         {

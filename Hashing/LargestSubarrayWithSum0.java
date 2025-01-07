@@ -7,14 +7,19 @@ public class LargestSubarrayWithSum0 {
         int sum=0;
         int len=0;
         HashMap<Integer,Integer> map = new HashMap<>();
-        for(int j=0;j<arr.length;j++)
+        for(int i=0;i<arr.length;i++)
         {
-            sum+=arr[j];
-            if(map.containsKey(sum))
+            sum+=arr[i];
+            if(sum==0)
             {
-                len= Math.max(len, j-map.get(sum));
+                len=i+1;
             }else{
-                map.put(sum, j);
+                if(map.containsKey(sum))
+                {
+                    len=Math.max(len, i-map.get(sum));
+                }else{
+                    map.put(sum, i);
+                }
             }
         }
         return len;

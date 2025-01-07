@@ -1,5 +1,7 @@
 //package ArrayList;
-
+/* "Given a sorted, rotated array and a target sum, implement a function that checks
+if there exists a pair of elements in the array that adds up to the target sum. 
+Return true if such a pair exists, and false otherwise."*/
 import java.util.ArrayList;
 
 public class PairSum2 {
