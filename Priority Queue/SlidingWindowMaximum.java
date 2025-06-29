@@ -33,7 +33,7 @@ public class SlidingWindowMaximum {
             pq.add(new Pair(i, arr[i]));
             res[i-k+1]=pq.peek().val;
         }
-        return res;
+        return res; 
     }
     public static void main(String[] args) {
         int arr[]={1,3,-1,-3,5,3,6,7};
